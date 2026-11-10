@@ -17,7 +17,7 @@
         .login-box {
             background: white;
             padding: 30px;
-            border-radius; 8px;
+            border-radius: 8px;
             box-shadow: 0 4px 8px rgba(0,0,0,0.1);
             width: 300px;
             text-align: center;
@@ -60,6 +60,13 @@
                 <option value="vet">veterinario</option>
                 <option value="prop">propietario</option>
             </select>
+            <br><br>
+            <label for="email">Correo Electrónico:</label>
+            <input type="email" name="email" required style="width: 100%; padding: 8px; margin-top: 5px; border: 1px solid #ccc; border-radius: 4px;">
+            <br><br>
+            <label for="password">Contraseña:</label>
+            <input type="password" name="password" id="password" required style="width: 100%; padding: 8px; margin-top: 5px; border: 1px solid #ccc; border-radius: 4px;">
+            <br><br>
 
             <button type="submit" class="btn-ingresar">ingresar</button>
         </form>

@@ -2,6 +2,10 @@
 
 use Illuminate\Support\Facades\Route;
 use Illuminate\Http\Request;
+use App\Http\Controllers\PropietarioController;
+
+Route::get('/propietarios/crear', [PropietarioController::class, 'create']) ->name('propietarios.create');
+Route::post('/propietarios', [PropietarioController::class, 'store']) -> name('propietarios.store');
 
 // Ruta principal q muestra la vista del login
 Route::get('/', function () {
