@@ -9,7 +9,8 @@ class PropietarioController extends Controller
 {
     public function create()
     {
-        return view('administrador.propietarios');
+        $propietarios = Propietario::orderBy('id', 'desc')->get();
+        return view('administrador.propietarios', compact('propietarios'));
     }
 
     public function store(Request $request)
@@ -22,6 +23,6 @@ class PropietarioController extends Controller
 
         Propietario::create($request->all());
 
-        return redirect('/administrador')->with('sucess', 'Propietario registrado correctamente');
+        return redirect()->route('propietarios.create')->with('success', 'Propietario registrado correctamente');
     }
 }
